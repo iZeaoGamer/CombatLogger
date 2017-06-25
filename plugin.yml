@@ -1,4 +1,4 @@
-name: VMCombatLogger
+name: CombatLogger
 version: 1.2.2
 api: 3.0.0-ALPHA6
 authors: [Lambo, pmmp-plugins, Zeao.]
