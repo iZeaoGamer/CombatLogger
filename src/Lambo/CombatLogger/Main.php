@@ -58,7 +58,7 @@ class Main extends PluginBase implements Listener{
     }
 
     private function setTime(Player $player){
-        $msg = "§7[§cCombatLogger§7]§c Logging out now will cause you to die.\n§cPlease wait ".$this->interval." seconds.§r";
+        $msg = "§7[§6Void§5Combat§dLogger§7] §6Logging out now will cause you to die.\n§aPlease wait ".$this->interval." seconds.§r";
         if(isset($this->players[$player->getName()])){
             if((time() - $this->players[$player->getName()]) > $this->interval){
                 $player->sendMessage($msg);
@@ -115,7 +115,7 @@ class Main extends PluginBase implements Listener{
         if(isset($this->players[$event->getPlayer()->getName()])){
             $cmd = strtolower(explode(' ', $event->getMessage())[0]);
             if(isset($this->blockedcommands[$cmd])){
-                $event->getPlayer()->sendMessage("§7[§cCombatLogger§7]§c You cannot use this command during combat.§r");
+                $event->getPlayer()->sendMessage("§7[§6Void§5Combat§dLogger§7]§c You cannot use this command during combat.§r");
                 $event->setCancelled();
             }
         }
